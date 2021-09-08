@@ -1,0 +1,71 @@
+{
+	"FixedPoint.Logical2UInteger": {
+		"inputs": [
+			{
+				"name": "LogicalArray",
+				"kind": "required",
+				"type": "logical",
+				"purpose": "要拼合的逻辑数组"
+			},
+			{
+				"name": "Dimension",
+				"kind": "ordered",
+				"type": [
+					"scalar",
+					"positive"
+				],
+				"purpose": "拼合维度"
+			},
+			{
+				"name": "UIntegerBits",
+				"kind": "namevalue",
+				"type": [
+					"scalar",
+					"positive"
+				],
+				"purpose": "整数位数"
+			}
+		]
+	},
+	"FixedPoint.UInteger2Logical": {
+		"inputs": [
+			{
+				"name": "UIntegerArray",
+				"kind": "required",
+				"type": [
+					[
+						"uint8"
+					],
+					[
+						"uint16"
+					],
+					[
+						"uint32"
+					],
+					[
+						"uint64"
+					],
+					[
+						"embedded.fi"
+					]
+				],
+				"purpose": "要展开的无符号整数组"
+			},
+			{
+				"name": "Dimension",
+				"kind": "ordered",
+				"type": [
+					"scalar",
+					"positive"
+				],
+				"purpose": "展开维度"
+			}
+		],
+		"outputs": [
+			{
+				"name": "LogicalArray",
+				"type": "logical"
+			}
+		]
+	}
+}
